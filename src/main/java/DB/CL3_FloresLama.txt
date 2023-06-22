@@ -1,0 +1,15 @@
+SET GLOBAL time_zone = '+8:00';
+-- borra la bd si existe
+DROP DATABASE IF EXISTS CL3_FloresLama;
+-- creamos la bd
+CREATE DATABASE CL3_FloresLama;
+-- activamos la bd
+USE CL3_FloresLama;
+
+CREATE TABLE IF NOT EXISTS Producto(
+producto_id int NOT NULL AUTO_INCREMENT COMMENT 'Id de Producto',
+producto_nombre varchar(100) NOT NULL COMMENT 'Nombres del Producto',
+producto_descripcion varchar(200) NOT NULL COMMENT 'Descripcion del Producto',
+producto_fecha_reg varchar(12) NOT NULL COMMENT 'Fecha de Registro',
+PRIMARY KEY (`producto_id`)
+);
